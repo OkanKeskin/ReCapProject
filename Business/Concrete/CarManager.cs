@@ -1,13 +1,16 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Business.Abstract;
+using DataAccess.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.Concrete
 {
-    public class CarManager : ICarServices
+    public class CarManager : ICarService
     {
         ICarDal _carDal;
 
@@ -15,6 +18,7 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
+
         public List<Car> GetAll()
         {
             return _carDal.GetAll();
